@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/hive-o/weber/compare/weber-v1.0.1...weber-v1.1.0) (2024-08-02)
+
+
+### Features
+
+* export puppeteer objects ([41510c1](https://github.com/hive-o/weber/commit/41510c1afebdfcd00b15ebcabdef29142948d928))
+
 ## [1.0.1](https://github.com/hive-o/weber/compare/weber-v1.0.0...weber-v1.0.1) (2024-08-02)
 
 
