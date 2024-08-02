@@ -28,7 +28,7 @@
     "semantic-release": {
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
       "options": {
-        "outputPath": "${WORKSPACE_DIR}/dist/packages/web-driver",
+        "outputPath": "${WORKSPACE_DIR}/dist/weber",
         "buildTarget": "weber:build"
       }
     }
