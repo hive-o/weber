@@ -45,6 +45,9 @@
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
   "packageManager": "yarn@4.3.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
