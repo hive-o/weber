@@ -24,6 +24,13 @@
       "options": {
         "reportsDirectory": "coverage/weber"
       }
+    },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "options": {
+        "outputPath": "${WORKSPACE_DIR}/dist/packages/web-driver",
+        "buildTarget": "weber:build"
+      }
     }
   }
 }

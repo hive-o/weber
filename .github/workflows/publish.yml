@@ -19,8 +19,8 @@ jobs:
       - name: release
         run: |
           yarn install
-          npx nx run lint weber --fix
-          npx nx run semantic-release weber
+          npx nx run lint --fix
+          npx nx run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
