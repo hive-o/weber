@@ -1,6 +1,6 @@
 interface RouteEntry {
   path: string;
-  query_params: URLSearchParams;
+  searchParams: URLSearchParams;
 }
 
 interface DomainEntry {
@@ -25,14 +25,14 @@ export class Navigation {
   }
 
   public entries() {
-    const list: { query_params: URLSearchParams; url: URL }[] = [];
+    const list: { searchParams: URLSearchParams; url: URL }[] = [];
 
     this.registry.forEach(({ domain, protocol, routes }) => {
       const site = `${protocol}//${domain}`;
 
-      routes.forEach(({ path, query_params }) => {
+      routes.forEach(({ path, searchParams }) => {
         const url = new URL(site + path);
-        list.push({ query_params, url });
+        list.push({ searchParams, url });
       });
     });
 
@@ -64,22 +64,22 @@ export class Navigation {
     const domain = url.hostname;
     const path = url.pathname;
 
-    let domain_entry = this.registry.get(domain);
-    if (!domain_entry) {
-      domain_entry = { domain, protocol: url.protocol, routes: new Map() };
-      this.registry.set(domain, domain_entry);
+    let domainEntry = this.registry.get(domain);
+    if (!domainEntry) {
+      domainEntry = { domain, protocol: url.protocol, routes: new Map() };
+      this.registry.set(domain, domainEntry);
     }
 
-    let route_entry = domain_entry.routes.get(path);
+    let route_entry = domainEntry.routes.get(path);
     if (!route_entry) {
-      route_entry = { path, query_params: url.searchParams };
-      domain_entry.routes.set(path, route_entry);
+      route_entry = { path, searchParams: url.searchParams };
+      domainEntry.routes.set(path, route_entry);
     } else {
       url.searchParams.forEach((value, key) => {
-        route_entry?.query_params.set(key, value);
+        route_entry?.searchParams.set(key, value);
       });
     }
 
-    return domain_entry;
+    return domainEntry;
   }
 }
