@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/hive-o/weber/compare/weber-v1.1.0...weber-v1.2.0) (2024-08-03)
+
+
+### Features
+
+* refactor navigation types ([1bf25da](https://github.com/hive-o/weber/commit/1bf25da1346547a6b1f39bd5eb51acbd6158000a))
+
 # [1.1.0](https://github.com/hive-o/weber/compare/weber-v1.0.1...weber-v1.1.0) (2024-08-02)
 
 
