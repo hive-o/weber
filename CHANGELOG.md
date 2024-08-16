@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/hive-o/weber/compare/weber-v1.2.0...weber-v1.3.0) (2024-08-16)
+
+
+### Features
+
+* move navigation from weber to common ([e658701](https://github.com/hive-o/weber/commit/e6587014f8ba42a2999e9dc2698d539e7f0e7bc4))
+
 # [1.2.0](https://github.com/hive-o/weber/compare/weber-v1.1.0...weber-v1.2.0) (2024-08-03)
 
 
